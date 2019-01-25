@@ -142,6 +142,6 @@ typedef struct MyHashTable {
   Answer **indices;
 } MyHashTable;
 
-void get_indices_of_item_weights(HashTable *ht, int key, int limit) {
+Answer *get_indices_of_item_weights(int index_1, int index_2, int limit) {
   
 }
