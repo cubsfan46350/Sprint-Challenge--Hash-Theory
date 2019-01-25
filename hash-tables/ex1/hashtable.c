@@ -143,5 +143,7 @@ typedef struct MyHashTable {
 } MyHashTable;
 
 Answer *get_indices_of_item_weights(int index_1, int index_2, int limit) {
-  
+  Answer *answer = malloc(sizeof(Answer));
+  answer->index_1 = strdup(index_1);
+  answer->index_2 = strdup(index_2);
 }
