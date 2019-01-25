@@ -9,7 +9,19 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
 
   // YOUR CODE HERE
 
-  return NULL;
+  Answer *answer = malloc(sizeof(Answer));
+  answer->index_1 = strdup(weights[0]);
+  answer->index_2 = strdup(weights[1]);
+
+    if (weights[0] < weights[1]) {
+      weights[1] = weights[0];
+    }
+      if (weights[0] + weights[1] == limit) {
+        return answer;
+      }
+    else {
+      return NULL;
+    }
 }
 
 void print_answer(Answer *answer)
