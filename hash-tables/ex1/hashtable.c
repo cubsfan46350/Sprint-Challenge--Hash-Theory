@@ -137,13 +137,22 @@ typedef struct Answer {
   int index_2;
 } Answer;
 
-typedef struct MyHashTable {
-  int limit;
-  Answer **indices;
-} MyHashTable;
+
 
 Answer *get_indices_of_item_weights(int index_1, int index_2, int limit) {
   Answer *answer = malloc(sizeof(Answer));
   answer->index_1 = strdup(index_1);
   answer->index_2 = strdup(index_2);
+
+  while (index_1 && index_2 != NULL) {
+    if (index_1 < index_2) {
+      index_2 = index_1;
+    }
+      if (index_1 + index_2 == limit) {
+        return answer;
+      }
+    else {
+      return NULL;
+    }
+  }
 }
