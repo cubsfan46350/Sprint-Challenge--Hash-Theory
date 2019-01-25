@@ -131,3 +131,17 @@ HashTable *hash_table_resize(HashTable *ht)
   destroy_hash_table(ht);
   return new_ht;
 }
+
+typedef struct Answer {
+  int index_1;
+  int index_2;
+} Answer;
+
+typedef struct MyHashTable {
+  int limit;
+  Answer **indices;
+} MyHashTable;
+
+void get_indices_of_item_weights(HashTable *ht, int key, int limit) {
+  
+}
